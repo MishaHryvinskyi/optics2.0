@@ -1,0 +1,36 @@
+@use "../utilities/mixin" as c;
+
+.advantages__list {
+    text-align: center;
+    & li:not(:last-child) {
+     margin-bottom: 60px;
+    }
+ }
+
+.advantages__item {
+    margin: 0 auto;
+}
+
+.advantages__item-wrapper {
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    @include c.size(120px, 120px);
+    padding: 20px;
+    background-color: var(--color-white);
+    box-shadow: var(--accent-shadow);
+
+    & > svg {
+        fill: var(--accent-color);
+    }
+}
+
+.advantages__title {
+    margin-bottom: 20px;
+}
+
+@media (min-width:768px) {
+    .advantages__list {
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,91 @@
+@use "../utilities/mixin" as m;
+
+.hero {
+    text-align: center;
+    background: linear-gradient(rgba(34, 34, 39, 0.4),
+    rgba(34, 34, 39, 0.4)), url(../images/hero/hero-mobile.jpg) center /cover no-repeat;
+    padding: 200px 0;
+
+    @include m.retina(2) {
+        background: linear-gradient(rgba(34, 34, 39, 0.4),
+        rgba(34, 34, 39, 0.4)), url(../images/hero/hero-mobile-2x.jpg) center /cover no-repeat;
+    }
+    
+    @include m.retina(3) {
+        background: linear-gradient(rgba(34, 34, 39, 0.4),
+        rgba(34, 34, 39, 0.4)), url(../images/hero/hero-mobile-3x.jpg) center /cover no-repeat;
+    }
+}
+
+.hero__title {
+    font-size: 38px;
+    margin: 25px 0;
+    font-family: var(--title-font), serif;
+    font-weight: 900;
+    color: var(--color-white);
+}
+
+.hero__paragraph {
+    margin: 0 auto;
+    color: var(--color-white);
+}
+
+.hero__wrapper {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    border-block: 1px solid var(--color-white);
+} 
+    
+@media (min-width:768px) {
+    .hero__title {
+        font-size: 72px;
+    }
+
+    .hero__paragraph {
+        width: 600px;    
+        font-size: 24px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1200px) {
+    .hero {
+        background: linear-gradient(rgba(34, 34, 39, 0.4),
+        rgba(34, 34, 39, 0.4)), url(../images/hero/hero-tablet.jpg) center /cover no-repeat;
+        padding: 300px 0;
+
+        @include m.retina(2) {
+            background: linear-gradient(rgba(34, 34, 39, 0.4),
+            rgba(34, 34, 39, 0.4)), url(../images/hero/hero-tablet-2x.jpg) center /cover no-repeat;;
+        }
+
+        @include m.retina(3) {
+            background: linear-gradient(rgba(34, 34, 39, 0.4),
+            rgba(34, 34, 39, 0.4)), url(../images/hero/hero-tablet-3x.jpg) center /cover no-repeat;;
+        }
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .hero {
+        background: linear-gradient(rgba(34, 34, 39, 0.4),
+        rgba(34, 34, 39, 0.4)), url(../images/hero/hero-bg.jpg) center /cover no-repeat;;
+        padding: 380px 0;
+
+        @include m.retina(2) {
+            background: linear-gradient(rgba(34, 34, 39, 0.4),
+            rgba(34, 34, 39, 0.4)), url(../images/hero/hero-bg-2x.jpg) center /cover no-repeat;;
+        }
+
+        @include m.retina(3) {
+            background: linear-gradient(rgba(34, 34, 39, 0.4),
+            rgba(34, 34, 39, 0.4)), url(../images/hero/hero-bg-3x.jpg) center /cover no-repeat;;
+        }
+    }
+
+    .hero__paragraph {
+        width: 800px;    
+    }
+}

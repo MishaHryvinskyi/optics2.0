@@ -1,0 +1,28 @@
+body.light {
+    --color-bg: var(--color-white);
+    --color-text: var(--primary-color);
+  }
+  
+  body.light .header,
+  body.light .footer {
+    background-color: var(--primary-color);
+    color: var(--color-white);
+  }
+  
+  body.dark {
+    --color-bg: var(--primary-color);
+    --color-text: var(--color-white);
+  }
+  
+  body.dark .header,
+  body.dark .footer {
+    background-color: var(--color-white);
+    color: var(--primary-color);
+  }
+  
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font: normal 300 16px var(--primary-font), sans-serif;
+    letter-spacing: 1.4;
+  }

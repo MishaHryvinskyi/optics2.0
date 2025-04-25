@@ -1,0 +1,66 @@
+@use "../utilities/mixin" as c;
+
+.toggle {
+    @include c.size(45px, 45px);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    background-color: var(--color-white);
+    box-shadow:var(--shadow-toggle);
+    line-height: 1;
+    transition: var(--time) var(--cubic); 
+
+    &:hover {
+      background-color: var(--color-white);
+      box-shadow: var(--accent-shadow);
+      transition: var(--time) var(--cubic); 
+    }
+
+    & > svg {
+      transition: var(--time) var(--cubic); 
+    }
+
+    &:hover svg {
+      transition: var(--time) var(--cubic); 
+      fill: var(--accent-color);
+    }
+  }
+  
+  .input {
+    display: none;
+  }
+  
+  .icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform var(--time);
+
+    &--moon {
+      transition-delay: var(--time);
+    }
+    
+    &--sun {
+      transform: scale(0);
+    }
+  }
+  
+  #switch:checked + .icon--moon {
+    transform: rotate(360deg) scale(0);
+  }
+  
+  #switch:checked ~ .icon--sun {
+    transition-delay: var(--time);
+    transform: scale(1) rotate(360deg);
+  }
+
+.container-theems {
+  margin-left: auto;
+  @include c.center;
+}
+
+@media screen and (min-width:320px) and (max-width:767px) {
+    .container-theems {
+      margin-left: auto;
+    }
+}

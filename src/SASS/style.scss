@@ -1,0 +1,21 @@
+@use 'modern-css-reset';
+
+@use './base/reset';
+@use './base/base';
+@use './utilities/variables';
+
+@use './components/visually-hidden';
+@use './components/container';
+@use './components/section';
+@use './components/social';
+@use './components/logo';
+@use './components/container-theems';
+@use './components/button';
+@use './components/title';
+
+@use './layout/header';
+@use './layout/hero';
+@use './layout/advantages';
+@use './layout/servises';
+
+@use './layout/footer';

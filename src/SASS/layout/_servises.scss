@@ -1,0 +1,36 @@
+.services__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    gap: 15px;
+}
+
+.services__item {
+    position: relative;
+    img {
+        border-radius: 4px 4px 0 0;
+    }
+}
+
+.services__title {
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgba(45, 38, 38, 0.82);
+}
+
+@media (min-width: 768px) and (max-width:1199px) {
+    .services__list {
+        grid-template-columns: repeat(auto-fit, 360px);
+    }
+}
+
+@media (min-width:1200px) {
+    .services__list {
+        grid-template-columns: repeat(auto-fit, 380px);
+    }
+}

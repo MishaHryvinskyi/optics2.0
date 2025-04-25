@@ -1,0 +1,19 @@
+@mixin retina($ratio) {
+    @media screen and (min-device-pixel-ratio: #{$ratio}),
+           (-webkit-min-device-pixel-ratio: #{$ratio}),
+           screen and (min-resolution: #{96 * $ratio}dpi),
+           screen and (min-resolution: #{$ratio}dppx) {
+      @content;
+    }
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin size ($w, $h) {
+  width: $w;
+  height: $h;
+}

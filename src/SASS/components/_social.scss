@@ -1,0 +1,28 @@
+@use "../utilities/mixin" as c;
+
+.social-item {
+    cursor: pointer;
+    @include c.center;
+    @include c.size(45px, 45px);
+    border: solid currentColor 2px;
+    border-radius: 10px;
+    transition: var(--time) var(--cubic);
+    
+    &:hover {
+        box-shadow: var(--accent-shadow);
+        border: var(--accent-color) solid 2px;
+        fill: var(--accent-color);
+        transition: var(--time) var(--cubic); 
+    }
+
+    &:hover .social-item__svg {
+        transition: var(--time) var(--cubic); 
+        fill: var(--accent-color);
+    }
+}
+
+.social-item__svg {
+    display: block;
+    transition: var(--time) var(--cubic); 
+    fill: currentColor;
+}
