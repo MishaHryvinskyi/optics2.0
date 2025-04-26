@@ -19,9 +19,9 @@
 
 .hero__title {
     font-size: 38px;
-    margin: 25px 0;
+    margin: 0 0 25px 0;
     font-family: var(--title-font), serif;
-    font-weight: 900;
+    font-weight: 800;
     color: var(--color-white);
 }
 
@@ -32,7 +32,7 @@
 
 .hero__wrapper {
     margin-bottom: 40px;
-    padding-bottom: 40px;
+    padding: 20px 0 40px 0;
     background: transparent;
     backdrop-filter: blur(15px);
     border-radius: 30px;

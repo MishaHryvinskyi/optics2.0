@@ -1,5 +1,3 @@
-@use 'modern-css-reset';
-
 @use './base/reset';
 @use './base/base';
 @use './utilities/variables';
@@ -17,5 +15,6 @@
 @use './layout/hero';
 @use './layout/advantages';
 @use './layout/servises';
+@use './layout/location';
 
 @use './layout/footer';
