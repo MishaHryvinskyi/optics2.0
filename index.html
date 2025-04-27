@@ -20,18 +20,24 @@
                       <img width="100" height="100" src="./src/images/logo.png" alt="logo">
                   </a>
               </div>
+              <button type="button" class="js-menu-toggle btn-menu" aria-label="toggle-menu-button">
+                <svg class="btn-menu__svg">
+                    <use class="btn-menu__open" href="./src/images/icons.svg#icon-menu"></use>
+                    <use class="btn-menu__close" href="./src/images/icons.svg#icon-char"></use>
+                </svg>
+              </button>
               
-              <div class="header__menu">
+              <div class="js-menu header__menu">
                   <nav class="header__navigation">
                       <ul class="header__navigation-list">
                           <li class="header__navigation-item">
-                              <a href="#services">Наші послуги</a>
+                              <a class="header__navigation-link" href="#services">Наші послуги</a>
                           </li>
                           <li class="header__navigation-item">
-                              <a href="#about">Про нас</a>
+                              <a class="header__navigation-link" href="#about">Про нас</a>
                           </li>
                           <li class="header__navigation-item">
-                              <a href="#contacts">Контакти</a>
+                              <a class="header__navigation-link" href="#contacts">Контакти</a>
                           </li>
                       </ul>
                   </nav>
@@ -59,24 +65,25 @@
                           </a>
                       </li>
                   </ul>
+
+                  <div class="container-theems">
+                    <label class="toggle" for="switch">
+                        <input id="switch" class="input" type="checkbox" aria-label="cheng theems">
+                        <div class="icon icon--moon">
+                            <svg height="32" width="32" viewBox="0 0 24 24">
+                            <use href="./src/images/icons.svg#icon-sun"></use>
+                            </svg>
+                        </div>
+                    
+                        <div class="icon icon--sun">
+                            <svg height="32" width="32" viewBox="0 0 24 24">
+                                <use href="./src/images/icons.svg#icon-moon"></use>
+                            </svg>
+                        </div>
+                    </label>
+                </div>
               </div>
-  
-              <div class="container-theems">
-                  <label class="toggle" for="switch">
-                      <input id="switch" class="input" type="checkbox" aria-label="cheng theems">
-                      <div class="icon icon--moon">
-                          <svg height="32" width="32" viewBox="0 0 24 24">
-                          <use href="./src/images/icons.svg#icon-sun"></use>
-                          </svg>
-                      </div>
-                  
-                      <div class="icon icon--sun">
-                          <svg height="32" width="32" viewBox="0 0 24 24">
-                              <use href="./src/images/icons.svg#icon-moon"></use>
-                          </svg>
-                      </div>
-                  </label>
-              </div>
+
           </div>
       </div>
     </header>  
@@ -148,9 +155,9 @@
               <img srcset="
                   ./src/images/servisec/make-glasses-2x.jpg 2x,
                   ./src/images/servisec/make-glasses-3x.jpg 3x,
-                  ./src/images/servisec/make-glasses-4x.jpg 4x
               " 
               width="330"
+              loading="lazy"
               class="services__img"
               src="./src/images/servisec/make-glasses-1x.jpg" 
               alt="make glasses">
@@ -160,9 +167,9 @@
               <img srcset="
                   ./src/images/servisec/repare-glasses-2x.jpg 2x,
                   ./src/images/servisec/repare-glasses-3x.jpg 3x,
-                  ./src/images/servisec/repare-glasses-4x.jpg 4x
               " 
               width="330" 
+              loading="lazy"
               class="services__img" 
               src="./src/images/servisec/repare-glasses-1x.jpg" 
               alt="repare glasses">
@@ -173,9 +180,9 @@
               srcset="
                   ./src/images/servisec/sun-glasses-2x.jpg 2x,
                   ./src/images/servisec/sun-glasses-3x.jpg 3x,
-                  ./src/images/servisec/sun-glasses-4x.jpg 4x
               "
               width="330" 
+              loading="lazy"
               class="services__img" 
               src="./src/images/servisec/sun-glasses-1x.jpg" 
               alt="sun glasses">
@@ -186,9 +193,9 @@
               srcset="
                   ./src/images/servisec/linses-2x.jpg 2x,
                   ./src/images/servisec/linses-3x.jpg 3x,
-                  ./src/images/servisec/linses-4x.jpg 4x
               "
               width="330" 
+              loading="lazy"
               class="services__img" 
               src="./src/images/servisec/linses-1x.jpg" 
               alt="contact linses">
@@ -199,9 +206,9 @@
               srcset="
                   ./src/images/servisec/accessory-2x.jpg 2x,
                   ./src/images/servisec/accessory-3x.jpg 3x,
-                  ./src/images/servisec/accessory-4x.jpg 4x
               "
               width="330" 
+              loading="lazy"
               class="services__img" 
               src="./src/images/servisec/accessory-1x.jpg" 
               alt="doctor">
@@ -212,9 +219,9 @@
               srcset="
                   ./src/images/servisec/doctor-2x.jpg 2x,
                   ./src/images/servisec/doctor-3x.jpg 3x,
-                  ./src/images/servisec/doctor-4x.jpg 4x
               "
               width="330" 
+              loading="lazy"
               class="services__img" 
               src="./src/images/servisec/doctor-1x.jpg" 
               alt="doctor">
@@ -227,6 +234,7 @@
         <h2 class="title">Де ми знаходимося</h2>
         <div class="location__wrapper">
             <iframe 
+            title="opticsKosiv"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10612.310385090308!2d25.08858027081629!3d48.320589290225335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f16!3m3!1m2!1s0x4736c7002b703829%3A0x8eaefc2e2eca6a45!2z0KHQsNC70L7QvS3QvNCw0LPQsNC30LjQvSAi0J7Qv9GC0LjQutCwIg!5e0!3m2!1suk!2sua!4v1745667677676!5m2!1suk!2sua" 
             width="100%" 
             height="450" 
