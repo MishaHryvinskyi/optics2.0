@@ -31,7 +31,7 @@ export default defineConfig({
     },
   ],
   build: {
-    minify: true, // disable minification
+    minify: false, // disable minification
     rollupOptions: {
       input: Object.fromEntries(
         glob
