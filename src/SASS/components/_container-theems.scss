@@ -1,7 +1,7 @@
-@use "../utilities/mixin" as c;
+@use "../utilities/mixin" as mx;
 
 .toggle {
-    @include c.size(45px, 45px);
+    @include mx.size(45px, 45px);
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -56,7 +56,6 @@
 
 .container-theems {
   margin-left: auto;
-  @include c.center;
 }
 
 @media screen and (min-width:320px) and (max-width:767px) {
