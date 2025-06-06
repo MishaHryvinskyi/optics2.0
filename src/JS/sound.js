@@ -1,0 +1,1 @@
+export const hoverSound = new Audio('/src/sound/hover.mp3');

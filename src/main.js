@@ -1,4 +1,5 @@
 import './SASS/style.scss'
+import { hoverSound } from './JS/sound';
 
 import { onThemeChanges } from './JS/theemes';
 
@@ -32,3 +33,11 @@ anchorLinks.forEach(link => {
 
 btnMenu.addEventListener('click', menuToggle);
 themeContainer.addEventListener('change', onThemeChanges);
+
+
+// sound
+document.querySelectorAll('a').forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    hoverSound.play();
+  });
+});
