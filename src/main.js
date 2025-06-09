@@ -41,3 +41,7 @@ document.querySelectorAll('a').forEach(link => {
     hoverSound.play();
   });
 });
+
+const openModal = () => {
+    r
+}
